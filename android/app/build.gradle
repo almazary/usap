@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+def props = new Properties()
+def lp = rootProject.file('local.properties')
+if (lp.exists()) lp.withInputStream { props.load(it) }
+
+android {
+    namespace 'com.almazari.usap'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.almazari.usap'
+        minSdk 26
+        targetSdk 34
+        versionCode 8
+        versionName '0.8'
+    }
+
+    signingConfigs {
+        // kunci debug tetap (usap.keystore di local.properties), supaya update APK bisa dipasang menimpa versi lama
+        if (props['usap.keystore']) {
+            debug {
+                storeFile file(props['usap.keystore'])
+                storePassword 'android'
+                keyAlias 'androiddebugkey'
+                keyPassword 'android'
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            if (props['usap.keystore']) signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { outputFileName = "usap-${variant.versionName}-${variant.buildType.name}.apk" }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}

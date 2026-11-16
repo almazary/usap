@@ -1,0 +1,8 @@
+agent/target/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.apk
+.DS_Store
+build.local.env

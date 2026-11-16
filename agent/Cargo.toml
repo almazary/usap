@@ -1,0 +1,22 @@
+[package]
+name = "usap-agent"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/almazary/usap"
+description = "Agen Usap: menerima sentuhan dari HP Android dan menggerakkan kursor macOS seperti trackpad"
+
+[dependencies]
+btleplug = "0.13.5"
+core-foundation = "0.10.1"
+core-graphics = { version = "0.25.0", features = ["highsierra"] }
+futures = "0.3.34"
+rusb = { version = "0.9.4", features = ["vendored"] }
+tokio = { version = "1.54.1", features = ["rt", "macros", "sync", "time"] }
+uuid = "1.29.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
+codegen-units = 1
