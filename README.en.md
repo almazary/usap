@@ -22,6 +22,19 @@ The agent is written in Rust. The Android app is Kotlin with no extra libraries.
 > macOS only for now. Windows support is planned.
 > The app's interface and the agent's messages are in Indonesian.
 
+## Why Usap exists
+
+I spend a lot of time in front of my laptop, from 6 in the morning until midnight. Not all of it is work, but
+my hand is on a mouse or trackpad for most of that time. I used a mouse for years without any problem. Then I
+got used to the Mac trackpad and found it far more comfortable. Going back to a mouse, my hand often got sore:
+moving a mouse takes effort from the arm and wrist, while a trackpad only needs your fingers.
+
+The catch is that I often use an external keyboard. The MacBook gets pushed back behind the keyboard, its
+trackpad is out of reach, and the usual partner for an external keyboard is a mouse. An Android phone is almost
+always on my desk, so Usap turns it into a trackpad that sits next to the keyboard. The goal is to feel as close
+to a Mac trackpad as possible: the pointer goes farther when you move faster, scrolling keeps gliding after you
+lift your fingers, and the gestures are the same.
+
 ## Requirements
 
 | | Minimum | Tested on |

@@ -21,6 +21,20 @@ Agen ditulis dalam Rust, aplikasi Android dalam Kotlin tanpa library tambahan.
 > Status: dipakai sehari-hari oleh pembuatnya, tapi belum banyak diuji di perangkat lain.
 > Saat ini hanya untuk macOS. Dukungan Windows direncanakan.
 
+## Kenapa Usap dibuat
+
+Saya menghabiskan banyak waktu di depan laptop, dari jam 6 pagi sampai jam 12 malam. Tidak semuanya untuk
+bekerja, tapi selama itu tangan saya hampir terus memegang mouse atau trackpad. Dulu saya memakai mouse dan
+tidak ada masalah. Lalu saya terbiasa dengan trackpad Mac, dan ternyata jauh lebih nyaman. Saat kembali ke
+mouse, tangan saya sering pegal. Menggerakkan mouse butuh tenaga lengan dan pergelangan, sedangkan trackpad
+cukup digerakkan dengan jari.
+
+Masalahnya, saya sering memakai keyboard eksternal. MacBook jadi tergeser ke belakang keyboard, trackpad-nya
+tidak terjangkau, dan pasangan yang biasa dipakai untuk keyboard eksternal adalah mouse. HP Android hampir
+selalu ada di meja, jadi Usap mengubah HP menjadi trackpad yang bisa ditaruh di samping keyboard. Tujuannya
+terasa semirip mungkin dengan trackpad Mac: kursor yang makin jauh kalau digeser cepat, scroll yang masih
+meluncur setelah jari diangkat, dan gestur yang sama.
+
 ## Kebutuhan
 
 | | Minimal | Sudah diuji |
